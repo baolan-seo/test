@@ -16,7 +16,34 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		
+<!-- 		<log4j2.verison>2.17.0</log4j2.verison> -->
+<!-- 		<logback.version>1.2.9</logback.version> -->
+<!-- 		<slf4j.version>1.7.32</slf4j.version> -->
+		
 	</properties>
+	
+	
+	
+	
+	
+	
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<enveironment>dev</enveironment>
+				<spring.profiles.active>dev</spring.profiles.active>			
+				<maven.test.skip>test</maven.test.skip>
+			</properties>
+		</profile>
+	</profiles>
+	
+	
+	
+	
+	
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -33,6 +60,34 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+	      <groupId>ch.qos.logback</groupId>
+	      <artifactId>logback-core</artifactId>
+	      <version>1.2.3</version>
+	      <exclusions>
+	        <exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>slf4j-api</artifactId>
+	        </exclusion>
+	      </exclusions>
+	      <scope>runtime</scope>    
+	    </dependency>
+	    <dependency>
+	      <groupId>ch.qos.logback</groupId>
+	      <artifactId>logback-classic</artifactId>
+	      <version>1.2.3</version>
+	      <exclusions>
+	        <exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>slf4j-api</artifactId>
+	        </exclusion>
+	      </exclusions>
+	      <scope>runtime</scope>    
+	    </dependency>
+	    
+    
+    
 	</dependencies>
 
 	<build>
