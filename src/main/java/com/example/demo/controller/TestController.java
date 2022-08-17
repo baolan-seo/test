@@ -13,10 +13,11 @@ public class TestController {
 	String config;
 	
 	
+	
 	@RequestMapping("/test")
 	public String test() {
-		System.out.print("================== : " + config);
+		System.out.println("================== : " + config);
 		
-		return "test~";
+		return "test @ ";
 	}
 }
