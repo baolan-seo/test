@@ -32,10 +32,19 @@
   </appender>
   
   
-  <logger level="TRACE" name="com.test.testProject" additivity="FALSE">
-    <appender-ref ref="STDOUT" />
+<!--   <logger level="TRACE" name="com.test.testProject" additivity="FALSE"> -->
+<!--     <appender-ref ref="STDOUT" /> -->
+<!--     <appender-ref ref="FILE" /> -->
+<!--   </logger> -->
+  
+    <logger level="debug" name="com.example.demo" >
+<!--     <appender-ref ref="FILE-DEBUG" /> -->
+<!--     <appender-ref ref="FILE-INFO" /> -->
+<!--     <appender-ref ref="FILE-EROR" /> -->
+    
+        <appender-ref ref="STDOUT" />
     <appender-ref ref="FILE" />
-  </logger>
+  </logger>  
   
   <root level="OFF">
     <appender-ref ref="STDOUT" />

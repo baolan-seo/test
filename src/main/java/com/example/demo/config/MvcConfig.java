@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @EnableWebMvc
 @Configuration
-@PropertySource({"classpath:${spring.profiles.active}/config.properties"})
+//@PropertySource({"classpath:${spring.profiles.active}/config.properties"})
 public class MvcConfig implements WebMvcConfigurer{
 	
 //	@Override
